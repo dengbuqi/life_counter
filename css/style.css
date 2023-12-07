@@ -148,7 +148,7 @@ input, select, button {
     color:red;
 }
 
-#translate {
+.translateSelectLanguage {
     list-style: none;
     margin: 0;
     padding: 0;
