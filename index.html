@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Goal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Life Goal</h1>
+    <div class="nice-paragraph">
+        <h3>YOLO OR Fight, It doesn't matter, you need a <span>LIFE GOAL!<span></h3>
+        <p>Life is struggle. Life is short. Life is a <span>FXXKING</span> movie.</p>
+        <p>No matter you want to spend your life <span>YOLO</span> or want to make <span>BIG ACHIEVEMENT</span>. You only have about <span></span>100</span> years to live. </p>
+        <p>Let's make some <span>PLANS</span> for your lifetime and hurry up!</p>
+        <p>Do not <span>WASTE</span> your time anymore.</p>
+    </div>
+    <form id="lifeForm">
+        <label for="birthDate">Enter Birth Date:</label>
+        <input type="date" id="birthDate" value="2000-01-01" required>
+
+        <label for="deathDate">Enter Death Date:</label>
+        <input type="date" id="deathDate" value="2100-01-01" required>
+
+        <label for="timeUnit">Block Duration:</label>
+        <select id="timeUnit">
+            <option value="year">Year</option>
+            <option value="month">Month</option>
+            <option selected value="week">Week</option>
+            <option value="day">Day</option>
+        </select>
+
+        <button id="runBtn" type="button" onclick="calculateLife()">Run</button>
+        <button id="clearBtn" type="button" onclick="clearStorage()">Clear</button>
+    </form>
+
+    <div id="weekContainer"></div>
+    <script src="js/main.js"></script>
+    
+</body>
+<!-- <script src="https://res.zvo.cn/translate/translate.js"></script> -->
+<!-- <script>
+    translate.selectLanguageTag.show = true;
+    console.log(translate.language.getLocal())
+    translate.language.setDefaultTo('english');
+    translate.setAutoDiscriminateLocalLanguage(); 
+    translate.nomenclature.append('english', 'chinese_simplified', `FXXKING=该死的
+    YOLO=及时行乐
+    for=为
+    lifetime=人生
+    hurry up=快跑起来吧
+    anymore=了`);
+    translate.listener.start();
+    translate.execute();
+</script> -->
+</html>
+<!-- TODO: 
+        1. Change timeUnit can still show the goal
+        2. Show all blocks in one viewpoint
+-->
