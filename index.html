@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Goal</title>
+    <title id="title">Life Goal</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Life Goal</h1>
-    <div class="nice-paragraph">
+    <h1 id="head">Life Goal</h1>
+    <div id="paragraph" class="nice-paragraph">
         <h3>YOLO OR Fight, It doesn't matter, you need a <span>LIFE GOAL!<span></h3>
         <p>Life is struggle. Life is short. Life is a <span>FXXKING</span> movie.</p>
         <p>No matter you want to spend your life <span>YOLO</span> or want to make <span>BIG ACHIEVEMENT</span>. You only have about <span></span>100</span> years to live. </p>
@@ -36,12 +36,11 @@
 
     <div id="weekContainer"></div>
     <script src="js/main.js"></script>
-    
 </body>
 <script src="https://res.zvo.cn/translate/translate.js"></script>
 <script>
     translate.selectLanguageTag.show = true;
-    console.log(translate.language.getLocal())
+    // console.log(translate.language.getLocal())
     translate.language.setDefaultTo('english');
     translate.setAutoDiscriminateLocalLanguage(); 
     translate.nomenclature.append('english', 'chinese_simplified', `FXXKING=该死的
@@ -50,7 +49,15 @@
     lifetime=人生
     hurry up=快跑起来吧
     anymore=了`);
-    translate.listener.start();
+    // translate.whole.class.push('block-tooltip');
+    // translate.whole.tag.push('prompt');
+    // translate.whole.tag.push('confirm');
+    // translate.listener.start();
+    var documents = [];
+    documents.push(document.getElementById('paragraph'));
+    documents.push(document.getElementById('title'));
+    documents.push(document.getElementById('head'));
+    translate.setDocuments(documents);
     translate.execute();
 </script>
 </html>
